@@ -358,9 +358,10 @@ ul {
 }
 
 .filter-item {
+  max-width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px var(--card-border-color);
+  border: 1px solid var(--card-border-color);
 }
 
 .filter-item:nth-child(3n) {
