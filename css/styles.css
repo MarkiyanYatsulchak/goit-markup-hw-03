@@ -185,6 +185,8 @@ img {
 }
 
 .advantages-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -237,7 +239,6 @@ img {
 }
 
 .team-item {
-  border-radius: 2px;
   background-color: var(--first-title-color);
 }
 
