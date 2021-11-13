@@ -27,6 +27,7 @@ p {
 }
 
 ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -41,30 +42,34 @@ ul {
   padding: 94px 0;
 }
 
-.link {
+a {
   text-decoration: none;
 }
 
-.link:hover,
-.link:focus {
+a:hover,
+a:focus {
   color: var(--accent-text-color);
 }
 
-.list,
-.item {
-  list-style: none;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* ----------------Header---------------------------------------------------- */
 
-.header-container {
-  display: flex;
-  align-items: center;
+.header {
   border-bottom: 1px solid var(--main-border-color);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
-  margin: 24px 93px 25px 0;
+  margin-right: 93px;
 
   text-decoration: none;
   font-family: Raleway;
@@ -88,7 +93,8 @@ ul {
 }
 
 .header-link {
-  padding: 15px 0;
+  padding: 32px 0;
+  display: block;
 
   font-weight: 500;
   font-size: 14px;
@@ -120,6 +126,7 @@ ul {
 
 /* ------------------Hero------------------------------- */
 .hero {
+  padding: 200px 0;
   background-color: var(--main-background-color);
 }
 
@@ -138,10 +145,8 @@ ul {
 }
 
 .hero-btn {
-  display: flex;
-  align-items: center;
   border-radius: 4px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
   padding: 10px 32px;
   border: 0;
 
@@ -163,8 +168,12 @@ ul {
 
 /* -------------------------Advantages------------------------------------------------- */
 
-.advantages-main-title {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .advantages-list {
@@ -193,6 +202,10 @@ ul {
 }
 
 /* -----------------------About us------------------------------------ */
+
+.about-us {
+  padding-top: 0;
+}
 
 .about-title {
   margin-bottom: 50px;
@@ -223,6 +236,11 @@ ul {
   display: flex;
 }
 
+.team-item {
+  border-radius: 2px;
+  background-color: var(--first-title-color);
+}
+
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -238,8 +256,12 @@ ul {
   color: var(--secondary-title-color);
 }
 
+.team-card {
+  padding: 30px 0;
+}
+
 .team-title {
-  margin: 30px 0 10px 0;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -250,8 +272,6 @@ ul {
 }
 
 .team-text {
-  margin-bottom: 30px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -263,12 +283,12 @@ ul {
 /* --------------------Footer--------------------------------------------------------------- */
 
 .footer {
+  padding: 60px 0;
   background-color: var(--main-background-color);
 }
 
 .footer-logo {
   display: inline-block;
-  margin-top: 60px;
   margin-bottom: 20px;
 
   text-decoration: none;
@@ -286,7 +306,6 @@ ul {
 
 .address-list {
   display: inline-block;
-  margin-bottom: 60px;
 }
 
 .address-item:not(:last-child) {
@@ -314,13 +333,10 @@ ul {
 /* FILTER ---------------------------------------------
 ----------------------------------------------------------------------------------------------- */
 
-.filter-main-title {
-  visibility: hidden;
-}
-
 .filter-btn-list {
   display: flex;
-  margin: 0 auto 50px 295px;
+  margin-bottom: 50px;
+  justify-content: center;
 }
 
 .filter-btn-item:not(:last-child) {
@@ -328,8 +344,6 @@ ul {
 }
 
 .filter-btn {
-  display: flex;
-  align-items: center;
   border-radius: 4px;
   padding: 6px 22px;
   border: 0;
@@ -357,19 +371,27 @@ ul {
   flex-wrap: wrap;
 }
 
+.filter-card {
+  padding: 20px 24px;
+  border: 1px var(--card-border-color);
+  border-style: none solid solid;
+}
+
 .filter-item {
-  max-width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid var(--card-border-color);
 }
 
 .filter-item:nth-child(3n) {
   margin-right: 0;
 }
 
+.filter-item:nth-child(n + 7) {
+  margin-bottom: 0;
+}
+
 .filter-item-title {
-  margin: 20px 24px 4px 24px;
+  margin-bottom: 4px;
 
   font-weight: 700;
   font-size: 18px;
@@ -379,8 +401,6 @@ ul {
 }
 
 .filter-item-text {
-  margin: 0 24px 20px 24px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
